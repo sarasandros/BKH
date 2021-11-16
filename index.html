@@ -20,13 +20,30 @@
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
       />
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
+      <script>
+        $(function(){　//ページの内容（HTMLやCSSなど）を全て読み込み準備が整ったら実行
+         $('.btnHamburger,#coverlayer,nav').on('click', function(){　//.btnHamburgerがクリックされた時の処理
+           $('.btnHamburger,#coverlayer,nav').toggleClass('is-active');　//.is-activeを付ける・外す
+         });
+       });	
+       </script>
     </head>
     <body>
         <header>
             <div class="wrp">
             <h1>
                 <div id="logo"><img src="images/header_logo.png" alt="バンコックの風ロゴ"></div>
+
+
+    <!--ハンバーガーメニュー-->
+    <div class="btnHamburger">
+    <span class="line line_01"></span>
+    <span class="line line_03"></span>
+    </div>
+    
+    <!--カバーレイヤー-->
+    <div id="coverlayer"></div>	
+
                 <nav>
                     <ul>
                         <li><a href="">Features</a></li>
