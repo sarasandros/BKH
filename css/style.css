@@ -40,6 +40,7 @@ header{
 }
 #logo{
     width: 50%;
+    margin-top: 16px;
 }
 #top_main{
     background-color: black;
@@ -201,7 +202,7 @@ ul#sns_part li:first-child{
    }
   
   /* 3本線の各線の位置を指定 ---------------------- */
-  .btnHamburger .line_01 { top: 10px; }
+  .btnHamburger .line_01 { top: 16px; }
   .btnHamburger .line_03 { top: 28px; }
   
   /*クリック前の暗転するカバー*/
