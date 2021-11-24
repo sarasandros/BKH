@@ -21,6 +21,17 @@
       />
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
       <script>
+    $(function(){
+        $(window).on('load', function(){
+            $('.loading').delay(1500).fadeOut(300);
+        });
+        function stopload(){
+            $('.loading').delay(1000).fadeOut(700);
+        }
+        setTimeout('stopload()',10000);
+    });
+
+
         $(function(){　//ページの内容（HTMLやCSSなど）を全て読み込み準備が整ったら実行
          $('.btnHamburger,#coverlayer,nav').on('click', function(){　//.btnHamburgerがクリックされた時の処理
            $('.btnHamburger,#coverlayer,nav').toggleClass('is-active');　//.is-activeを付ける・外す
@@ -30,6 +41,10 @@
     </head>
     <body>
         <header>
+            <div class="loading">
+                <div class="animation"><img src="images/shrimp.gif"></div>
+            </div>
+
             <div class="wrp">
             <h1>
                 <div id="logo"><img src="images/header_logo.png" alt="バンコックの風ロゴ"></div>
@@ -73,7 +88,7 @@
                                 心も体も大満足！</p>
                         </li>
                     </ul>
-                    <div id="doll2"><img src="images/tuktuk.gif"></div>
+                    <div id="doll2"><img src="images/truck.gif"></div>
                 </section>
                 <section class="part2 wrp">
                     <img src="images/main_menu.jpg">
@@ -89,7 +104,10 @@
                           </div>
                 </section>
                 <section class="part4 wrp">
-                    <h2><img src="images/food_munu.png"></h2>
+                    <ul id="food_menu">
+                        <li><img src="images/food_munu.png"></li>
+                        <li id="doll2_1"><img src="images/shrimp.gif"></li>
+                    </ul>
                     <ul>
                         <li>
                             <img src="images/roastbeef.jpg">
@@ -129,7 +147,10 @@
                             <p>趣味は釣り。
                                 その日取れた新鮮な魚を一番美味しい
                                 食べ方でご提供！</p>
-                            <div id="doll3"><img src="images/shrimp.gif"></div>
+                            <div id="gif_anime">  
+                                <div id="doll3_1"><img src="images/palm.png"></div>
+                                <div id="doll3_2"><img src="images/elephant.gif"></div>
+                            </div>  
                         </li>
                     </ul>
                 </section>
@@ -192,10 +213,7 @@
                             <p>※ラストオーダー 20:30
                             定休日: 元気に毎日休まず営業中！</p>
                         </div>
-                        <ul>
-                            <li id="dall4"><img src="images/cacktail.png"></li>
-                            <li id="dall5"><img src="images/flower.gif"></li>
-                        </ul>
+                         <div id="doll4"><img src="images/cacktail.gif"></div>
                     </div>
                     <div id="right_part">
                         <div>
