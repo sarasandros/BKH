@@ -65,6 +65,7 @@ header{
     left: 10%;
     bottom: 0;
     width: 20%;
+    z-index: 50;
 }
 .part1 h2,
 .part4 h2{
@@ -94,6 +95,7 @@ header{
 }
 #osake{
     margin-top: 30px;
+    text-align: center;
 }
 .part4 ul li p:last-child{
     margin-bottom: 30px;
@@ -310,4 +312,45 @@ ul#sns_part li:first-child{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+/* タブレットの設定 */
+@media screen and (min-width: 600px){
+    header{
+        height: 111px;
+    }
+    #top_main{
+        height: 600px;
+    }
+    .part1 h2, .part4 h2 {
+        padding-top: 50px;
+    }
+    p{
+        font-size: 180%;
+    }
+    .part2 h4{
+        font-size: 200%;
+    }
+    article:nth-of-type(2) .part2 p{
+        font-size: 150%;
+    }
+    .part1 h5{
+        font-size: 200%; 
+    }
+    #left_part p, #right_part p{
+        font-size: 180%;
+    }
+    #left_part p:nth-of-type(2), #right_part p:nth-of-type(2){
+        font-size: 150%;
+    }
+    .part4 ul li p:last-child{
+        margin-bottom: 50px;
+    }
+    #food_menu li:first-child{
+        margin-top: 90px;
+    }
+    .btnHamburger{
+        top: 30px;
+    }
 }
